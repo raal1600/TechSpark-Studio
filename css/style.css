@@ -1,0 +1,750 @@
+/* Basic Reset */
+* {
+    margin: 0; /* Nollställer marginalerna för alla element */
+    padding: 0; /* Nollställer paddingen för alla element */
+    box-sizing: border-box; /* Inkluderar padding och border i elementets totala bredd och höjd */
+}
+
+/* Wrapper */
+.wrapper {
+    max-width: 1200px; /* Sätter en maximal bredd för wrapper */
+    margin: 0 auto; /* Centrera wrapper horisontellt */
+    width: 100%; /* Gör att wrapper använder full bredd */
+    padding: 0 20px; /* Lägger till horisontell padding */
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif; /* Använder Arial som standard typsnitt */
+    line-height: 1.6; /* Ökar radavståndet för bättre läsbarhet */
+    display: flex; /* Använder flexbox för layout */
+    flex-direction: column; /* Ställer in kolumnlayout */
+    min-height: 100vh; /* Sätter minimi höjd till 100% av viewport höjd */
+    background-color: #ffffff; /* Vit bakgrundsfärg */
+    transition: background-color 0.3s, color 0.3s; /* Lägger till övergångseffekter för bakgrund och textfärger */
+    padding: 0 10px; /* Extra padding för mindre skärmar */
+}
+
+/* Settings Icon */
+.menu-icon {
+    position: fixed; /* Fixerar ikonen på skärmen */
+    bottom: 20px; /* Placerar den 20px från botten */
+    right: 20px; /* Placerar den 20px från höger kant */
+    background-color: #333; /* Bakgrundsfärg för ikonen */
+    border-radius: 50%; /* Gör ikonen rund */
+    width: 50px; /* Sätter bredden */
+    height: 50px; /* Sätter höjden */
+    display: flex; /* Använder flexbox för centrering av innehåll */
+    justify-content: center; /* Centrera innehållet horisontellt */
+    align-items: center; /* Centrera innehållet vertikalt */
+    cursor: pointer; /* Ändrar muspekaren till en hand */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lägger till en skugga */
+    transition: background-color 0.3s; /* Lägger till övergång för bakgrundsfärg */
+}
+.menu-icon:hover {
+    background-color: #555; /* Ändrar bakgrundsfärgen vid hover */
+}
+.menu-icon img {
+    width: 24px; /* Sätter bredden på ikonen */
+    height: 24px; /* Sätter höjden på ikonen */
+    filter: invert(100%); /* Gör ikonen vit genom att invertera färgen */
+}
+
+/* Toggle Menu for Options */
+.menu-options {
+    position: fixed; /* Fixerar menyn på skärmen */
+    bottom: 80px; /* Placerar den 80px från botten */
+    right: 20px; /* Placerar den 20px från höger kant */
+    background-color: #333; /* Bakgrundsfärg för menyn */
+    padding: 10px; /* Padding runt menyn */
+    border-radius: 8px; /* Rundar hörnen på menyn */
+    display: none; /* Döljer menyn som standard */
+    flex-direction: column; /* Använder kolumnlayout för menyn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lägger till en skugga */
+    z-index: 1000; /* Sätter z-index för att vara över andra element */
+}
+.menu-options button {
+    background-color: #444; /* Bakgrundsfärg för knappar */
+    color: #fff; /* Textfärg för knappar */
+    border: none; /* Tar bort standardgränsen */
+    padding: 10px; /* Padding runt knapparna */
+    margin: 5px 0; /* Marginal ovan och under knapparna */
+    border-radius: 5px; /* Rundar hörnen på knapparna */
+    cursor: pointer; /* Ändrar muspekaren till en hand */
+    transition: background-color 0.3s; /* Lägger till övergång för bakgrundsfärg */
+}
+.menu-options button:hover {
+    background-color: #555; /* Ändrar bakgrundsfärgen vid hover */
+}
+
+/* Themes */
+body.light-theme {
+    background-color: #ffffff; /* Vit bakgrund för ljust tema */
+    color: #333; /* Mörk textfärg för ljust tema */
+}
+
+/* Enhanced Dark Theme for Improved Readability */
+body.dark-theme {
+    background-color: #121212; /* Mörk bakgrund för att minska bländning */
+    color: #f5f5f5; /* Ljus textfärg för bättre läsbarhet */
+}
+
+header.dark-theme, footer.dark-theme {
+    background-color: #1f1f1f; /* Litet ljusare än bakgrunden för header och footer */
+    color: #ffffff; /* Vit textfärg för tydlighet */
+}
+
+/* Header */
+header {
+    width: 100%; /* Full bredd för headern */
+    background-color: #333; /* Bakgrundsfärg för header */
+    transition: background-color 0.3s; /* Övergång för bakgrundsfärg */
+    padding: 1em 0; /* Specifika padding-värden för header */
+    height: 100px; /* Anger en fast höjd för header */
+}
+header .wrapper {
+    display: flex; /* Använder flexbox för headerinnehåll */
+    justify-content: space-between; /* Fördelar utrymmet mellan logotyp och navigering */
+    align-items: center; /* Centrerar innehållet vertikalt */
+    padding: 0.5em 0; /* Padding ovan och under */
+}
+
+/* Logo Styling */
+header #logo {
+    font-size: 1.8em; /* Större textstorlek för logotyp */
+    text-decoration: none; /* Tar bort understrykning */
+    color: #ffa500; /* Orange färg för logotyptext */
+    display: flex; /* Använder flexbox för logotypinnehåll */
+    align-items: center; /* Centrerar innehållet vertikalt */
+    transition: transform 0.3s ease, filter 0.3s; /* Övergångseffekter för transform och filter */
+}
+header #logo:hover {
+    transform: scale(1.05); /* Förstorar logotypen vid hover */
+    filter: brightness(1.2); /* Ökar ljusstyrkan vid hover */
+}
+header #logo img {
+    height: 60px; /* Anger höjden på logotypbilden */
+    width: 300px; /* Anger bredden på logotypbilden */
+    object-fit: cover; /* Säkerställer att bilden täcker sin behållare */
+    margin-right: 10px; /* Marginal till höger av logotypbilden */
+}
+
+/* Navigation */
+nav ul {
+    list-style: none; /* Tar bort standard punktlistan */
+    display: flex; /* Använder flexbox för navigationsmenyn */
+    justify-content: flex-end; /* Justerar navigeringslänkar till höger */
+    gap: 1.2em; /* Avstånd mellan navigeringslänkar */
+}
+nav ul li a {
+    text-decoration: none; /* Tar bort understrykning från länkar */
+    color: #f0f0f0; /* Ljus textfärg för länkar */
+    font-weight: 500; /* Normal vikt för text */
+    transition: opacity 0.3s ease, color 0.3s; /* Övergångseffekter för opacitet och färg */
+    padding: 5px 0; /* Padding ovan och under */
+}
+nav ul li a.active {
+    font-weight: bold; /* Fet stil för den aktiva länken */
+    color: #ffa500; /* Orange färg för den aktiva länken */
+    border-bottom: 2px solid #ffa500; /* Understrykning för aktiv länk */
+}
+nav ul li a:hover {
+    color: #ffffff; /* Vit färg vid hover */
+    opacity: 0.85; /* Minskar opaciteten vid hover */
+}
+
+main {
+    padding: 2em; /* Padding runt huvudinnehållet */
+    flex: 1; /* Låt main ta upp resterande utrymme */
+    max-width: 1200px; /* Maximal bredd för huvudinnehållet */
+    margin: 0px auto; /* Centrera huvudinnehållet horisontellt */
+    padding-top: 3em; /* Ökar padding ovanför för att passa headern */
+}
+
+/* Hero Section */
+.hero {
+    background: url('../images/hero_background_image.jpg') no-repeat center center/cover; /* Bakgrundsbild för hero-sektionen */
+    padding: 80px 20px; /* Padding ovan och nedan */
+    text-align: center; /* Centrera texten */
+    color: #fff; /* Vit textfärg */
+    border-radius: 8px; /* Rundade hörn */
+    margin-bottom: 1em; /* Marginal under hero-sektionen */
+    margin-top: 3em; /* Marginal ovanför hero-sektionen */
+}
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6); /* Mörk bakgrund med transparens för hero-innehållet */
+    display: inline-block; /* Gör att innehållet kan anpassas */
+    padding: 20px; /* Padding runt hero-innehållet */
+    border-radius: 8px; /* Rundade hörn på hero-innehållet */
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    background-color: #ffa500; /* Orange bakgrund för knappen */
+    color: #fff; /* Vit textfärg */
+    padding: 10px 20px; /* Padding runt knappen */
+    border: none; /* Ingen kant för knappen */
+    border-radius: 5px; /* Rundade hörn för knappen */
+    text-decoration: none; /* Tar bort understrykning från knappen */
+    margin-top: 15px; /* Marginal ovanför knappen */
+    display: inline-block; /* Gör knappen inline-block */
+    transition: background-color 0.3s; /* Övergång för bakgrundsfärg */
+}
+.cta-button:hover {
+    background-color: #ff8c00; /* Mörkare orange vid hover */
+}
+
+/* CTA Section */
+.cta {
+    background-color: #f0f0f0; /* Ljus bakgrund för CTA-sektionen */
+    padding: 40px 20px; /* Padding runt CTA-sektionen */
+    text-align: center; /* Centrera texten i CTA-sektionen */
+    border-radius: 8px; /* Rundade hörn för CTA-sektionen */
+    margin-top: 3em; /* Marginal ovanför CTA-sektionen */
+}
+.cta h2 {
+    font-size: 1.8em; /* Större textstorlek för CTA-rubriken */
+    margin-bottom: 0.5em; /* Marginal under rubriken */
+}
+.cta p {
+    font-size: 1.1em; /* Normal textstorlek för CTA-paragraf */
+    margin-bottom: 1em; /* Marginal under paragrafen */
+    color: #666; /* Grå textfärg för paragrafen */
+    max-width: 600px; /* Maximal bredd för paragrafen */
+    margin: auto; /* Centrera paragrafen */
+}
+
+/* Services Section */
+.services {
+    background-color: #f9f9f9; /* Ljus bakgrund för tjänstesektion */
+    padding: 50px 20px; /* Padding runt tjänstesektionen */
+    text-align: center; /* Centrera texten i tjänstesektionen */
+    margin-top: 3em; /* Marginal ovanför tjänstesektionen */
+}
+.service-list {
+    display: grid; /* Använder grid-layout för tjänstelistan */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dynamisk kolumnlayout */
+    gap: 1.5em; /* Avstånd mellan tjänster */
+    padding: 1em 0; /* Padding ovan och nedan för tjänstelistan */
+}
+.service {
+    background: #fff; /* Vit bakgrund för varje tjänst */
+    border: 1px solid #ddd; /* Grå kant runt varje tjänst */
+    padding: 20px; /* Padding runt tjänstebeskrivningen */
+    border-radius: 8px; /* Rundade hörn för tjänsten */
+    text-align: center; /* Centrera texten i tjänsten */
+    transition: transform 0.3s ease, box-shadow 0.3s; /* Övergång för transform och skugga */
+}
+.service:hover {
+    transform: scale(1.05); /* Förstorar tjänsten vid hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Lägger till en skugga vid hover */
+}
+.service img {
+    height: 90px; /* Sätter höjd på tjänstebilden */
+    width: 90px; /* Sätter bredd på tjänstebilden */
+    margin-bottom: 10px; /* Marginal under bilden */
+    object-fit: contain; /* Bevarar bildens förhållande */
+}
+
+/* About Section */
+.about {
+    background-color: #f9f9f9; /* Ljus bakgrund för om-sektionen */
+    padding: 60px 20px; /* Padding runt om-sektionen */
+    margin: 0 auto; /* Centrera om-sektionen */
+    margin-top: 3em; /* Marginal ovanför om-sektionen */
+    text-align: center; /* Centrera texten i om-sektionen */
+    border-radius: 8px; /* Rundade hörn för om-sektionen */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Mjuk skugga för djup */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Övergångseffekter för om-sektionen */
+}
+
+.about:hover {
+    transform: scale(1.01); /* Subtil skala vid hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Tydligare skugga vid hover */
+}
+
+/* About Section Title */
+.about h1 {
+    font-size: 2.5em; /* Större textstorlek för om-sektionens rubrik */
+    color: #333; /* Mörk textfärg */
+    margin-bottom: 1em; /* Marginal under rubriken */
+    font-weight: bold; /* Fet stil för rubriken */
+    text-transform: uppercase; /* Versaler för rubriken */
+    letter-spacing: 1px; /* Avstånd mellan bokstäver */
+}
+
+/* About Content */
+.about-content {
+    display: flex; /* Använder flexbox för om-innehåll */
+    flex-direction: column; /* Ställer in kolumnlayout */
+    align-items: center; /* Centrerar innehållet horisontellt */
+    text-align: left; /* Vänsterjusterar texten */
+    gap: 20px; /* Avstånd mellan elementen */
+    margin-top: 20px; /* Marginal ovanför om-innehållet */
+}
+
+/* Profile Image */
+.about-content img {
+    width: 150px; /* Sätter bredden på profilbilden */
+    height: 150px; /* Sätter höjden på profilbilden */
+    object-fit: cover; /* Bevarar bildens förhållande */
+    border-radius: 50%; /* Gör bilden rund */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Mjuk skugga för djup */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Övergångseffekter för skugga och transform */
+}
+
+.about-content img:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Tydligare skugga vid hover */
+    transform: scale(1.05); /* Subtil zoomeffekt vid hover */
+}
+
+/* About Text */
+.about-text {
+    font-size: 1.1em; /* Normal textstorlek för beskrivningen */
+    color: #666; /* Grå textfärg för beskrivningen */
+    line-height: 1.6; /* Radavstånd för bättre läsbarhet */
+    max-width: 600px; /* Maximal bredd för textinnehållet */
+    transition: color 0.3s ease; /* Övergång för textfärg */
+}
+
+.about-text p {
+    margin-bottom: 1em; /* Marginal under varje paragraf */
+}
+
+.about-text p:hover {
+    color: #333; /* Mörkare färg vid hover för betoning */
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row; /* Byter till radlayout på större skärmar */
+        align-items: flex-start; /* Justerar innehållet till toppen */
+    }
+
+    .about-content img {
+        margin-right: 20px; /* Marginal till höger av bilden */
+    }
+}
+
+/* Portfolio Section */
+.portfolio {
+    background-color: #f9f9f9; /* Ljus bakgrund för portfoliosection */
+    padding: 50px 20px; /* Padding runt portfoliosection */
+    text-align: center; /* Centrera texten */
+    margin-top: 3em; /* Marginal ovanför sektionen */
+}
+.portfolio-grid {
+    display: grid; /* Använder grid-layout för portfolion */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Dynamisk kolumnlayout */
+    gap: 1.5em; /* Avstånd mellan portfolioprojekt */
+    padding: 2em 0; /* Padding ovan och nedan */
+}
+.portfolio-grid img {
+    width: 200px; /* Sätter bredden på bilder i portfolion */
+    height: 200px; /* Sätter höjden på bilder i portfolion */
+    object-fit: cover; /* Bevarar bildens förhållande */
+    border-radius: 5px; /* Rundade hörn för bilderna */
+    margin: 0 auto; /* Centrera bilderna */
+}
+.project {
+    border: 1px solid #ddd; /* Grå kant runt varje projekt */
+    padding: 1.5em; /* Padding runt projektet */
+    text-align: center; /* Centrera texten */
+    background-color: #fff; /* Vit bakgrund för projekt */
+    border-radius: 8px; /* Rundade hörn för projekten */
+    transition: transform 0.3s ease, box-shadow 0.3s; /* Övergång för transform och skugga */
+    display: flex; /* Använder flexbox för att centrera innehållet */
+    flex-direction: column; /* Ställer in kolumnlayout för projekten */
+    align-items: center; /* Centrerar innehållet horisontellt */
+}
+.project:hover {
+    transform: scale(1.05); /* Förstorar projektet vid hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Lägger till en skugga vid hover */
+}
+
+/* Contact Form Container */
+.contact {
+    background-color: #f9f9f9; /* Ljus bakgrund för kontaktsektionen */
+    padding: 50px 20px; /* Padding runt kontaktsektionen */
+    text-align: center; /* Centrera texten */
+    margin-top: 3em; /* Marginal ovanför sektionen */
+}
+.contact-info {
+    text-align: center; /* Centrera texten */
+    padding: 30px; /* Padding för kontaktinformation */
+    margin: auto; /* Centrera sektionen */
+    margin-bottom: 2em; /* Marginal under kontaktinformation */
+    background-color: #f9f9f9; /* Ljus bakgrund för kontaktinformation */
+    border-radius: 8px; /* Rundade hörn för sektionen */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Mjuk skugga för djup */
+    max-width: 600px; /* Maximal bredd för kontaktinformation */
+}
+.contact-form {
+    text-align: center; /* Centrera texten i formuläret */
+    padding: 40px; /* Padding runt formuläret */
+    margin: auto; /* Centrera formuläret */
+    background-color: #ffffff; /* Vit bakgrund för formuläret */
+    border-radius: 12px; /* Rundade hörn för formuläret */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Mjuk skugga för djup */
+    max-width: 600px; /* Maximal bredd för kontaktformuläret */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Övergång för skugga och transform */
+}
+
+/* Form Title */
+.contact-form h2 {
+    margin-bottom: 1em; /* Marginal under rubriken */
+    color: #333; /* Mörk textfärg för rubriken */
+    font-size: 1.8em; /* Större textstorlek för rubriken */
+    font-weight: bold; /* Fet stil för rubriken */
+    text-transform: uppercase; /* Versaler för rubriken */
+    letter-spacing: 1px; /* Avstånd mellan bokstäver */
+}
+
+/* Input Fields */
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Full bredd för inputfält */
+    padding: 0.75em; /* Padding för inputfält */
+    font-size: 1em; /* Normal textstorlek */
+    margin-top: 0.5em; /* Marginal ovanför fältet */
+    border: 1px solid #ddd; /* Grå kant runt inputfält */
+    border-radius: 6px; /* Rundade hörn för inputfält */
+    background-color: #f5f5f5; /* Ljus bakgrund för inputfält */
+    color: #333; /* Mörk textfärg för inputfält */
+    transition: border-color 0.3s ease, background-color 0.3s ease; /* Övergång för kantfärg och bakgrund */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Inre skugga för djup */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ffa500; /* Orange kantfärg vid fokus */
+    background-color: #fff; /* Vit bakgrund vid fokus */
+    outline: none; /* Tar bort den blå konturen vid fokus */
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.3); /* Subtil glöd för fokus */
+}
+
+/* Submit Button */
+.contact-form button {
+    background-color: #ffa500; /* Orange bakgrund för knappen */
+    color: #fff; /* Vit textfärg */
+    padding: 0.75em 1.5em; /* Padding runt knappen */
+    font-size: 1em; /* Normal textstorlek */
+    font-weight: bold; /* Fet stil för knappen */
+    border: none; /* Ingen kant för knappen */
+    border-radius: 6px; /* Rundade hörn för knappen */
+    cursor: pointer; /* Ändrar muspekaren till en hand */
+    margin-top: 1em; /* Marginal ovanför knappen */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Övergång för bakgrundsfärg och transform */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Mjuk skugga för djup */
+}
+.contact-form button:hover {
+    background-color: #ff8c00; /* Mörkare orange vid hover */
+    transform: translateY(-2px); /* Lätt lyft effekt vid hover */
+}
+
+/* Privacy Policy Section */
+.privacy-policy {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 5em;
+    max-width: 800px; /* Sätter en maxbredd för att centrera innehållet på större skärmar */
+    margin-left: auto; /* Centrerar sektionen horisontellt */
+    margin-right: auto; /* Centrerar sektionen horisontellt */
+    text-align: center; /* Centrerar texten */
+}
+.privacy-policy h1 {
+    font-size: 2.5em; /* Större textstorlek för rubriken */
+    margin-bottom: 0.5em; /* Marginal under rubriken */
+    color: #333; /* Mörk textfärg för rubriken */
+}
+.privacy-policy h2 {
+    font-size: 1.8em; /* Större textstorlek för underrubriker */
+    margin-top: 1em; /* Marginal ovanför underrubrik */
+    margin-bottom: 0.5em; /* Marginal under underrubrik */
+    color: #333; /* Mörk textfärg för underrubriker */
+}
+.privacy-policy p {
+    margin-bottom: 1em; /* Marginal under varje paragraf */
+    line-height: 1.5; /* Radavstånd för bättre läsbarhet */
+}
+.privacy-policy ul {
+    list-style-type: disc;
+    margin: 0 auto; /* Centrerar listan i sektionen */
+    padding-left: 20px; /* Skapar ett standardindrag för punkterna */
+    text-align: left; /* Vänsterjusterar texten inuti listan */
+    max-width: 600px; /* Sätter en maxbredd för att centrera hela listan inom sektionen */
+}
+
+.privacy-policy ul li {
+    margin-bottom: 0.5em; /* Lägger till utrymme mellan punkterna */
+}
+@media (max-width: 767px) {
+    .privacy-policy h1 {
+        font-size: 1.8em; /* Gör h1 mindre, som en h2 */
+        font-weight: bold; /* Bevarar fet stil för att efterlikna en h2 */
+        margin-bottom: 0.5em;
+    }
+
+    .privacy-policy h2 {
+        font-size: 1.5em; /* Gör h2 mindre, som en h3 */
+        font-weight: bold; /* Bevarar fet stil för att efterlikna en h3 */
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+}
+
+/* Footer Styling */
+footer {
+    width: 100%; /* Full bredd för footer */
+    background-color: #222; /* Mörk bakgrund för footer */
+    color: #ddd; /* Ljus textfärg för footer */
+    padding: 40px 0; /* Padding runt footern */
+    margin-top: 50px; /* Marginal ovanför footern */
+}
+footer .wrapper {
+    display: flex; /* Använder flexbox för footerinnehåll */
+    justify-content: space-between; /* Fördelar utrymmet mellan vänster och höger innehåll */
+    align-items: center; /* Centrerar innehållet vertikalt */
+    flex-wrap: wrap; /* Gör att innehållet kan wrapa till nästa rad */
+    gap: 20px; /* Avstånd mellan elementen */
+}
+
+/* Social Media Icon Links */
+.footer-right {
+    display: flex; /* Använder flexbox för sociala ikoner */
+    justify-content: flex-end; /* Justerar ikonerna till höger */
+    gap: 15px; /* Avstånd mellan ikoner */
+}
+.footer-icon {
+    width: 40px; /* Sätter bredden på sociala ikoner */
+    height: 40px; /* Sätter höjden på sociala ikoner */
+    background-color: #444; /* Mörk bakgrund för ikoner */
+    border-radius: 50%; /* Gör ikonerna runda */
+    display: flex; /* Använder flexbox för centrering */
+    align-items: center; /* Centrerar innehållet vertikalt */
+    justify-content: center; /* Centrerar innehållet horisontellt */
+    transition: background-color 0.3s, transform 0.3s; /* Övergång för bakgrund och transform */
+}
+.footer-icon img {
+    width: 20px; /* Sätter bredden på ikonen */
+    height: 20px; /* Sätter höjden på ikonen */
+    filter: brightness(0) invert(1); /* Gör ikonen vit genom att invertera färgen */
+}
+.footer-icon:hover {
+    background-color: #ffa500; /* Ändrar bakgrundsfärgen vid hover */
+    transform: scale(1.1); /* Förstorar ikonen vid hover */
+}
+
+/* Navigation Links in Dark Theme */
+body.dark-theme nav ul li a {
+    color: #e0e0e0; /* Ljusare grå för bättre läsbarhet */
+}
+body.dark-theme nav ul li a.active,
+body.dark-theme nav ul li a:hover {
+    color: #ffcc80; /* Mjuk orange för markering */
+    border-bottom: 2px solid #ffcc80; /* Understrykning vid hover eller aktiv länk */
+}
+
+/* Buttons in Dark Theme */
+body.dark-theme .cta-button {
+    background-color: #ff9800; /* Tydlig orange för knappar */
+    color: #ffffff; /* Vit textfärg för knappar */
+}
+body.dark-theme .cta-button:hover {
+    background-color: #ffb74d; /* Ljusa upp vid hover för bättre kontrast */
+}
+
+/* High-Contrast Backgrounds for Sections in Dark Theme */
+body.dark-theme .cta,
+body.dark-theme .services,
+body.dark-theme .about,
+body.dark-theme .contact,
+body.dark-theme .contact-info,
+body.dark-theme .privacy-policy,
+body.dark-theme .contact-form {
+    background-color: #1e1e1e; /* Mörk bakgrund för sektioner i mörkt tema */
+    color: #f5f5f5; /* Ljusare textfärg för tydlighet */
+}
+body.dark-theme .contact-form h2,
+body.dark-theme .privacy-policy h2 {
+    color: #ffcc80; /* Kontrastfärg för rubriken i mörkt tema */
+}
+body.dark-theme .about h1,
+body.dark-theme .privacy-policy h1 {
+    color: #ffcc80; /* Kontrastfärg för rubriken i mörkt tema */
+}
+
+/* CTA Brödtext (för att göra texten ljusare) */
+body.dark-theme .cta p {
+    color: #f0f0f0; /* Ljusare textfärg för bättre läsbarhet */
+}
+
+/* Services Section in Dark Theme */
+body.dark-theme .services {
+    background-color: #1e1e1e; /* Mörk bakgrund för tjänster i mörkt tema */
+    color: #f5f5f5; /* Ljus text för tjänster */
+}
+
+body.dark-theme .service {
+    background-color: #333333; /* Mörkare kort för kontrast */
+    border: 1px solid #4a4a4a; /* Tydlig kant på korten */
+}
+body.dark-theme .service h2, 
+body.dark-theme .service h3 {
+    color: #ffcc80; /* Orange ton för rubriker i mörkt tema */
+}
+body.dark-theme .service-list img {
+    border: 2px solid #4a4a4a; /* Subtil kant för bilderna */
+    border-radius: 5px; /* Matcha med ljusa tema */
+    transition: border-color 0.3s ease; /* Övergång för kantfärgen */
+}
+
+body.dark-theme .service-list img:hover {
+    border-color: #ffcc80; /* Orange kant på hover för kontrast */
+}
+
+/* Portfolio Section in Dark Theme */
+body.dark-theme .portfolio {
+    background-color: #1e1e1e; /* Mörk bakgrund för portfolion */
+    color: #f5f5f5; /* Ljusare textfärg för portfolion */
+}
+
+body.dark-theme .portfolio h2 {
+    color: #ffcc80; /* Kontrastfärg för rubriken i mörkt tema */
+}
+
+body.dark-theme .portfolio-grid {
+    background-color: #1e1e1e; /* Säkerställer bakgrund för grid */
+}
+
+body.dark-theme .portfolio-grid .project {
+    background-color: #333333; /* Mörkare grå bakgrund på projektkorten */
+    border: 1px solid #4a4a4a; /* Tydlig kant på korten */
+    color: #f5f5f5; /* Ljus text på korten */
+}
+
+body.dark-theme .portfolio-grid img {
+    border: 2px solid #4a4a4a; /* Subtil kant för bilderna */
+    border-radius: 5px; /* Matcha med ljusa tema */
+    transition: border-color 0.3s ease; /* Övergång för kantfärgen */
+}
+
+body.dark-theme .portfolio-grid img:hover {
+    border-color: #ffcc80; /* Orange kant på hover för kontrast */
+}
+
+/* Input Fields in Dark Theme */
+body.dark-theme .contact-form input,
+body.dark-theme .contact-form textarea {
+    background-color: #2e2e2e; /* Mörk bakgrund med tydlig kontrast */
+    color: #ffffff; /* Vit textfärg */
+    border: 1px solid #4a4a4a; /* Tydlig kantfärg */
+}
+body.dark-theme .contact-form input:focus,
+body.dark-theme .contact-form textarea:focus {
+    border-color: #ffcc80; /* Orange kantfärg vid fokus */
+    box-shadow: 0 0 5px rgba(255, 204, 128, 0.5); /* Subtil glöd för fokus */
+}
+
+/* OM RAMI HALABI - About Text with Hover Effect */
+body.dark-theme .about-text p {
+    color: #e0e0e0; /* Standard ljusare text för läsbarhet */
+    transition: color 0.3s ease; /* Övergång för textfärg */
+}
+
+body.dark-theme .about-text p:hover {
+    color: #ffcc80; /* Orange färg vid hover för bättre synlighet */
+}
+
+/* Footer Icons in Dark Theme */
+body.dark-theme .footer-icon {
+    background-color: #333333; /* Tydlig bakgrund för ikoner */
+}
+body.dark-theme .footer-icon:hover {
+    background-color: #ffcc80; /* Orange färg vid hover för ikoner */
+}
+
+/* High Contrast for Table Headers */
+body.dark-theme th {
+    background-color: #3a3a3a; /* Bakgrund för tabellhuvuden */
+    color: #ffffff; /* Vit textfärg för tabellhuvuden */
+}
+body.dark-theme tr:nth-child(even) {
+    background-color: #292929; /* Bakgrund för jämna rader */
+}
+
+/* Responsive Adjustments */
+@media (min-width: 1200px) {
+    header .wrapper {
+        display: flex; /* Flexbox layout för header på stora skärmar */
+        align-items: center; /* Centrerar innehållet vertikalt */
+        justify-content: space-between; /* Fördelar utrymmet mellan element */
+    }
+    header #logo {
+        margin-right: auto; /* Ger utrymme för navigation */
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        width: 100%; /* Full bredd för header på små skärmar */
+        background-color: #333; /* Bakgrundsfärg för header */
+        transition: background-color 0.3s; /* Övergång för bakgrundsfärg */
+        padding: 0 0; /* Ingen padding ovan och under */
+        height: 100px; /* Anger en fast höjd */
+    }
+    header .wrapper {
+        flex-direction: column; /* Byter till kolumnlayout för header */
+        align-items: center; /* Centrera innehållet horisontellt */
+        text-align: center; /* Centrera texten */
+        gap: 10px; /* Avstånd mellan elementen */
+    }
+    header #logo img {
+        height: 40px; /* Sätter höjd på logotypbilden */
+        width: 200px; /* Sätter bredd på logotypbilden */
+        margin-bottom: 0px; /* Tar bort marginalen under logotypbilden */
+    }
+    footer .footer-content {
+        flex-direction: column; /* Byter till kolumnlayout för footer */
+        text-align: center; /* Centrera texten i footern */
+        padding: 20px; /* Padding för footer */
+    }
+}
+
+/* Lightbox Overlay */
+.lightbox-overlay {
+    position: fixed; /* Fixerar overlay för att täcka hela vyområdet */
+    top: 0; /* Placerar den på toppen */
+    left: 0; /* Placerar den till vänster */
+    width: 100%; /* Full bredd för overlay */
+    height: 100%; /* Full höjd för overlay */
+    background-color: rgba(0, 0, 0, 0.8); /* Mörk bakgrundsoverlay */
+    display: flex; /* Använder flexbox för centrering */
+    justify-content: center; /* Centrera innehållet horisontellt */
+    align-items: center; /* Centrera innehållet vertikalt */
+    z-index: 10000; /* Högt z-index för att synas över andra element */
+}
+
+.lightbox-image {
+    max-width: 90%; /* Maximal bredd för bilden */
+    max-height: 90%; /* Maximal höjd för bilden */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Mjuk skugga för djup */
+    border: 2px solid #fff; /* Vit kant runt bilden */
+    border-radius: 8px; /* Rundade hörn för bilden */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

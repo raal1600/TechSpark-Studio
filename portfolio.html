@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Definierar teckenkodning och inställningar för responsiv design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | TechSpark Studio</title>
+    <!-- Länkar till den externa CSS-filen för styling -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Sidhuvud med logotyp och navigationsmeny -->
+    <header>
+        <div class="wrapper">
+            <!-- Länk till startsidan med företagets logotyp -->
+            <a href="index.html" id="logo">
+                <img src="images/logo.png" alt="Företagets logotyp" />
+            </a>
+            <nav>
+                <ul>
+                    <!-- Navigationslänkar för olika sidor på webbplatsen -->
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="services.html">Tjänster</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">Om oss</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Huvudinnehåll -->
+    <main class="wrapper">
+        <section class="portfolio">
+            <h1>Portfolio</h1>
+            <p>Här kan du se några av våra tidigare projekt:</p>
+            <div class="portfolio-grid">
+                <!-- Lista över projekt med bild, titel och beskrivning -->
+                <div class="project">
+                    <img src="images/portfolio/intercom.png" alt="Intercom" loading="lazy">
+                    <h3>Intercom Automation</h3>
+                    <p>Automatiserade 80% av supportärendena med Intercom genom smart AI och ett omfattande hjälpcenter.</p>
+                </div>
+                <div class="project">
+                    <img src="images/portfolio/hexnode.png" alt="Hexnode" loading="lazy">
+                    <h3>Enhetshantering med Hexnode</h3>
+                    <p>Implementerade Hexnode för effektiv hantering av enheter och säkerställde IT-överensstämmelse.</p>
+                </div>
+                <div class="project">
+                    <img src="images/portfolio/crowdin.png" alt="Crowdin" loading="lazy">
+                    <h3>Global Expansion med Crowdin</h3>
+                    <p>Införde Crowdin som lokaliseringsverktyg för att stödja en global expansion.</p>
+                </div>
+                <div class="project">
+                    <img src="images/portfolio/iso27001.png" alt="ISO 27001 Certifiering" loading="lazy">
+                    <h3>ISO 27001 Certifiering</h3>
+                    <p>Bidrog till ISO 27001-certifieringen genom att implementera nödvändiga säkerhetssystem och övervaka efterlevnaden.</p>
+                </div>
+            </div>                      
+        </section>
+        <!-- Call-to-action-sektion för att engagera besökare -->
+        <section class="cta">
+            <h2>Inspirerad av våra projekt?</h2>
+            <p>Låt oss skapa något fantastiskt tillsammans. Kontakta oss för att diskutera hur vi kan hjälpa dig att nå dina digitala mål.</p>
+            <!-- Call-to-action-knapp för att kontakta företaget -->
+            <a href="contact.html" class="cta-button">Kontakta oss idag</a>
+        </section>         
+    </main>
+
+    <!-- Sidfot -->
+    <footer>
+        <div class="wrapper footer-content">
+            <div class="footer-left">
+                <!-- Företagets upphovsrättsinformation -->
+                <p>&copy; 2024 Webbutveckling Företag. Alla rättigheter förbehållna.</p>
+                <!-- Länk för att kontakta företaget och till integritetspolicy -->
+                <p>Designad av Rami | <a href="mailto:ramismailadress@gmail.com" style="color: #ffa500; text-decoration: none;">Kontakta oss</a> | <a href="privacy-policy.html" style="color: #ffa500; text-decoration: none;">Integritetspolicy</a></p>
+            </div>
+            <div class="footer-right">
+                <!-- Länkar till företagets sociala medier -->
+                <a href="https://www.facebook.com" class="footer-icon" target="_blank" aria-label="Facebook">
+                    <img src="images/icons/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.X.com" class="footer-icon" target="_blank" aria-label="x">
+                    <img src="images/icons/x.svg" alt="Twitter">
+                </a>
+                <a href="https://www.linkedin.com" class="footer-icon" target="_blank" aria-label="LinkedIn">
+                    <img src="images/icons/linkedin.svg" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com" class="footer-icon" target="_blank" aria-label="Instagram">
+                    <img src="images/icons/instagram.svg" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>             
+    
+    <!-- Menyikon för inställningar -->
+    <div class="menu-icon">
+        <img src="images/icons/settings.svg" alt="Inställningar" id="menuToggle">
+    </div>
+
+    <!-- Dold meny för alternativ -->
+    <div class="menu-options" id="menuOptions">
+        <button id="themeToggle">Byt Tema</button> <!-- Knapp för att byta tema -->
+        <button id="backToTop">Tillbaka till Toppen</button> <!-- Knapp för att scrolla till toppen av sidan -->
+    </div>
+
+    <!-- JavaScript-fil för interaktivitet -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>

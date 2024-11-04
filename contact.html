@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Definierar teckenkodning och inställningar för responsiv design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | TechSpark Studio</title>
+    <!-- Länkar till den externa CSS-filen för styling -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Sidhuvud med logotyp och navigationsmeny -->
+    <header>
+        <div class="wrapper">
+            <!-- Länk till startsidan med företagets logotyp -->
+            <a href="index.html" id="logo">
+                <img src="images/logo.png" alt="Företagets logotyp" loading="lazy" />
+            </a>
+            <nav>
+                <ul>
+                    <!-- Navigationslänkar för olika sidor på webbplatsen -->
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="services.html">Tjänster</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">Om oss</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Huvudinnehåll -->
+    <main class="wrapper">
+        <!-- Kontaktinformation sektion -->
+        <section class="contact">
+            <div class="contact-info">
+                <h1>Kontakta oss</h1>
+                <p>Vi ser fram emot att höra från dig! Kontakta oss via e-post eller fyll i formuläret nedan, så återkommer vi till dig så snart som möjligt.</p>
+            </div>
+            <div class="contact-form">
+                <h2>Fyll i formuläret</h2>
+                <!-- Formulär för kontaktinformation -->
+                <form action="#">
+                    <label for="name">Namn:</label>
+                    <input type="text" id="name" name="name" placeholder="Ditt namn" required>
+        
+                    <label for="email">E-post:</label>
+                    <input type="email" id="email" name="email" placeholder="din.e-post@exempel.com" required>
+        
+                    <label for="message">Meddelande:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Skriv ditt meddelande här..." required></textarea>
+        
+                    <button type="submit" class="cta-button">Skicka</button> <!-- Skicka-knapp för formuläret -->
+                </form>
+            </div>
+        </section>        
+
+        <!-- Call-to-Action sektion -->
+        <section class="cta">
+            <h2>Har du en idé eller ett projekt?</h2>
+            <p>Låt oss diskutera hur vi kan hjälpa dig att förverkliga dina visioner med våra webblösningar.</p>
+            <!-- E-postlänk för direkt kontakt -->
+            <a href="mailto:ramismailadress@gmail.com" class="cta-button">Skicka ett e-postmeddelande</a>
+        </section>
+    </main>
+
+    <!-- Sidfot -->
+    <footer>
+        <div class="wrapper footer-content">
+            <div class="footer-left">
+                <!-- Företagets upphovsrättsinformation -->
+                <p>&copy; 2024 Webbutveckling Företag. Alla rättigheter förbehållna.</p>
+                <!-- Länk för att kontakta företaget och till integritetspolicy -->
+                <p>Designad av Rami | <a href="mailto:ramismailadress@gmail.com" style="color: #ffa500; text-decoration: none;">Kontakta oss</a> | <a href="privacy-policy.html" style="color: #ffa500; text-decoration: none;">Integritetspolicy</a></p>
+            </div>
+            <div class="footer-right">
+                <!-- Länkar till företagets sociala medier -->
+                <a href="https://www.facebook.com" class="footer-icon" target="_blank" aria-label="Facebook">
+                    <img src="images/icons/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.X.com" class="footer-icon" target="_blank" aria-label="x">
+                    <img src="images/icons/x.svg" alt="Twitter">
+                </a>
+                <a href="https://www.linkedin.com" class="footer-icon" target="_blank" aria-label="LinkedIn">
+                    <img src="images/icons/linkedin.svg" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com" class="footer-icon" target="_blank" aria-label="Instagram">
+                    <img src="images/icons/instagram.svg" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>             
+    
+    <!-- Menyikon för inställningar -->
+    <div class="menu-icon">
+        <img src="images/icons/settings.svg" alt="Inställningar" id="menuToggle">
+    </div>
+    
+    <!-- Dold meny för alternativ -->
+    <div class="menu-options" id="menuOptions">
+        <button id="themeToggle">Byt Tema</button> <!-- Knapp för att byta tema -->
+        <button id="backToTop">Tillbaka till Toppen</button> <!-- Knapp för att scrolla till toppen av sidan -->
+    </div>
+    
+    <!-- JavaScript-fil för interaktivitet -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>
+
+

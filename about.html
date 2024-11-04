@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Definierar teckenkodning och inställningar för responsiv design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om oss | TechSpark Studio</title>
+    <!-- Länkar till den externa CSS-filen för styling -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Sidhuvud med logotyp och navigationsmeny -->
+    <header>
+        <div class="wrapper">
+            <!-- Länk till startsidan med företagets logotyp -->
+            <a href="index.html" id="logo">
+                <img src="images/logo.png" alt="Företagets logotyp" />
+            </a>
+            <nav>
+                <ul>
+                    <!-- Navigationslänkar för olika sidor på webbplatsen -->
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="services.html">Tjänster</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">Om oss</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Huvudinnehåll -->
+    <main class="wrapper">
+        <section class="about">
+            <h1>Om Rami Halabi</h1>
+            <div class="about-content">
+                <!-- Bild och textinnehåll om Rami Halabi -->
+                <img src="images/team/member1.jpg" alt="Rami Halabi" loading="lazy">
+                <div class="about-text">
+                    <p>Hej! Jag heter Rami Halabi, en passionerad frontend-utvecklare med fokus på att skapa användarvänliga och responsiva webbplatser. Med en bakgrund i IT och ett brinnande intresse för design och teknik strävar jag efter att leverera skräddarsydda lösningar som hjälper företag att synas och växa online.</p>
+                    <p>Jag tror på en kombination av teknisk expertis och kreativitet för att skapa webbplatser som inte bara är funktionella utan också visuellt tilltalande. Varje projekt är en möjlighet för mig att hjälpa mina kunder att nå sina digitala mål genom engagerande och innovativa lösningar.</p>
+                </div>
+            </div>
+        </section>        
+        
+        <!-- Call-to-action-sektion för kontakt -->
+        <section class="cta">
+            <h2>Vill du samarbeta med oss?</h2>
+            <p>Kontakta oss idag för att se hur vi kan hjälpa ditt företag att nå nya digitala höjder.</p>
+            <!-- Call-to-action-knapp för att kontakta företaget -->
+            <a href="contact.html" class="cta-button">Kontakta oss</a>
+        </section>
+    </main>
+
+    <!-- Sidfot -->
+    <footer>
+        <div class="wrapper footer-content">
+            <div class="footer-left">
+                <!-- Företagets upphovsrättsinformation -->
+                <p>&copy; 2024 Webbutveckling Företag. Alla rättigheter förbehållna.</p>
+                <!-- Länk för att kontakta företaget och till integritetspolicy -->
+                <p>Designad av Rami | <a href="mailto:ramismailadress@gmail.com" style="color: #ffa500; text-decoration: none;">Kontakta oss</a> | <a href="privacy-policy.html" style="color: #ffa500; text-decoration: none;">Integritetspolicy</a></p>
+            </div>
+            <div class="footer-right">
+                <!-- Länkar till företagets sociala medier -->
+                <a href="https://www.facebook.com" class="footer-icon" target="_blank" aria-label="Facebook">
+                    <img src="images/icons/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.X.com" class="footer-icon" target="_blank" aria-label="x">
+                    <img src="images/icons/x.svg" alt="Twitter">
+                </a>
+                <a href="https://www.linkedin.com" class="footer-icon" target="_blank" aria-label="LinkedIn">
+                    <img src="images/icons/linkedin.svg" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com" class="footer-icon" target="_blank" aria-label="Instagram">
+                    <img src="images/icons/instagram.svg" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>             
+    
+    <!-- Menyikon för inställningar -->
+    <div class="menu-icon">
+        <img src="images/icons/settings.svg" alt="Inställningar" id="menuToggle">
+    </div>
+    
+    <!-- Dold meny för alternativ -->
+    <div class="menu-options" id="menuOptions">
+        <button id="themeToggle">Byt Tema</button> <!-- Knapp för att byta tema -->
+        <button id="backToTop">Tillbaka till Toppen</button> <!-- Knapp för att scrolla till toppen av sidan -->
+    </div>
+    
+    <!-- JavaScript-fil för interaktivitet -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>
